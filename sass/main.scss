@@ -1,11 +1,25 @@
 $primary-color: #06c;
 
+$creamWhite: #f5eede;
+$deepRed: #531413;
+
 $font-family: 'General Sans', sans-serif;
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  //overflow-y: scroll;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: $font-family;
+  background-color: $creamWhite;
+  color: $deepRed;
 }
 
 .container {
@@ -43,18 +57,27 @@ header nav a {
   display: flex;
   gap: 10px;
   align-items: center;
+  color: $deepRed;
+
+  &:visited {
+    color: $deepRed;
+  }
+
+  &:hover {
+    color: lighten($deepRed, 25%);
+  }
 }
 
 .search-field {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 10px 0;
+  padding: 1rem 0;
 
   label {
-    border: $primary-color solid 1px;
+    border: $deepRed solid 1px;
     border-radius: 4px;
-    padding: 10px;
+    padding: .5rem;
   }
 
   input[type=search] {
@@ -62,14 +85,15 @@ header nav a {
     font-family: $font-family;
     outline: none;
     width: min-content;
+    background-color: transparent;
   }
 
   i {
-    color: $primary-color;
+    color: $deepRed;
   }
 }
 
-.header-nav {
+.category-nav {
   border-top: black solid 1px;
   border-bottom: solid black 1px;
 
@@ -81,3 +105,69 @@ header nav a {
     text-transform: uppercase;
   }
 }
+
+.category-nav-list:first-child {
+  position: relative;
+
+  &:hover .dropdown {
+    display: grid;
+  }
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 100px);
+  background-image: linear-gradient(to bottom,
+          rgba($deepRed, .5),
+          rgba($deepRed, .9)),
+  url("../images/dropdown-image.jpg");
+  background-size: cover;
+  background-position: right;
+
+  .dropdown-list-link {
+    color: $creamWhite;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: all 350ms;
+    }
+
+    &:hover::after{
+      width: 30%;
+    }
+  }
+}
+
+.dropdown-first-list {
+  grid-column: span 2;
+  display: block;
+
+  a {
+    color: inherit;
+  }
+
+}
+
+.dropdown-second-list {
+  grid-column: span 2;
+  display: block;
+
+  a {
+    color: inherit;
+  }
+}
+
+.dropdown-image {
+  grid-column: span 3;
+  width: 100%;
+}
+
