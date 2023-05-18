@@ -87,10 +87,10 @@ header nav a:hover {
   text-transform: uppercase;
 }
 
-.category-nav-list:first-child {
+.category-nav-item:first-child {
   position: relative;
 }
-.category-nav-list:first-child:hover .dropdown {
+.category-nav-item:first-child:hover .dropdown {
   display: grid;
 }
 
