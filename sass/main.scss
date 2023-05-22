@@ -2,8 +2,10 @@ $primary-color: #06c;
 
 $creamWhite: #f5eede;
 $deepRed: #531413;
+$accentColor: #f04c49;
 
 $font-family: 'General Sans', sans-serif;
+$heading-font: 'Zodiak', serif;
 
 *, *::before, *::after {
   margin: 0;
@@ -99,6 +101,7 @@ header nav a {
 
   ul {
     justify-content: space-evenly;
+    align-items: center;
   }
 
   a {
@@ -126,6 +129,7 @@ header nav a {
   url("../images/dropdown-image.jpg");
   background-size: cover;
   background-position: right;
+  z-index: 2;
 
   .dropdown-list-link {
     color: $creamWhite;
@@ -141,7 +145,7 @@ header nav a {
       transition: all 350ms;
     }
 
-    &:hover::after{
+    &:hover::after {
       width: 30%;
     }
   }
@@ -171,3 +175,141 @@ header nav a {
   width: 100%;
 }
 
+/*banner*/
+.banner {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  margin-top: 8px;
+  overflow-y: hidden;
+
+  .banner-content {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+  }
+
+  .banner-heading {
+    font-size: 6.6rem;
+    font-family: $heading-font;
+    font-weight: 300;
+    color: $creamWhite;
+    background-image: linear-gradient(to bottom, transparent, rgba(black, .4), transparent);
+  }
+
+  .banner-btn {
+    overflow: hidden;
+    background-color: $accentColor;
+    border-radius: .4rem;
+    color: $deepRed;
+    font-weight: 600;
+    width: 12rem;
+    border: none;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    font-family: $font-family;
+    text-transform: uppercase;
+
+
+    .banner-btn-text-1 {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      transition: top .2s ease-in;
+    }
+
+    .banner-btn-text-2 {
+      @extend .banner-btn-text-1;
+      top: 150%;
+      transform: translateY(50%);
+    }
+
+    &:hover {
+      .banner-btn-text-1 {
+        top: -100%;
+      }
+
+      .banner-btn-text-2 {
+        top: 15%;
+      }
+    }
+  }
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+
+    .slide-btn-wrapper {
+      background-color: #f04c49;
+      display: inline-block;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateY(-100%) translateX(-50%);
+
+      .slide-btn {
+        border: none;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    .slideshow-wrapper {
+      display: flex;
+      width: 400%;
+      position: relative;
+      animation: slideshow  20s infinite;
+      z-index: -1;
+
+    }
+
+    .slide {
+      flex: 1;
+
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+@keyframes slideshow {
+  0% {left: 0}
+
+  10% {left: 0}
+
+  15% {left: -100%}
+
+  25% {left: -100%}
+
+  30% {left: -200%}
+
+  40% {left: -200%}
+
+  45% {left: -300%}
+
+  55% {left: -300%}
+
+  60% {left: -200%}
+
+  70% {left: -200%}
+
+  75% {left: -100%}
+
+  85% {left: -100%}
+
+  90% {left: 0}
+}
+
+/*end of banner*/
