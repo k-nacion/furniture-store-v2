@@ -204,19 +204,46 @@ header nav a:hover {
   overflow: hidden;
   position: relative;
 }
-.banner .slideshow .slide-btn-wrapper {
-  background-color: #f04c49;
-  display: inline-block;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translateY(-100%) translateX(-50%);
-}
-.banner .slideshow .slide-btn-wrapper .slide-btn {
-  border: none;
+.banner .slideshow .slide-btn {
+  border: solid 3px #531413;
   border-radius: 50%;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 95%;
+  transform: translateY(-100%) translateX(-50%);
+  cursor: pointer;
+}
+.banner .slideshow .slide-btn:focus {
+  background-color: #f04c49;
+}
+.banner .slideshow .slide-btn-1 {
+  left: 47%;
+}
+.banner .slideshow .slide-btn-1:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+.banner .slideshow .slide-btn-2 {
+  left: 49%;
+}
+.banner .slideshow .slide-btn-2:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+.banner .slideshow .slide-btn-3 {
+  left: 51%;
+}
+.banner .slideshow .slide-btn-3:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+.banner .slideshow .slide-btn-4 {
+  left: 53%;
+}
+.banner .slideshow .slide-btn-4:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -300%;
 }
 .banner .slideshow .slideshow-wrapper {
   display: flex;
