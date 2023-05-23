@@ -24,6 +24,12 @@ body {
   color: $deepRed;
 }
 
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+
 .container {
   width: 79%;
   margin: 0 auto;
@@ -193,7 +199,7 @@ header nav a {
   }
 
   .banner-heading {
-    font-size: 6.6rem;
+    font-size: 7.2rem;
     font-family: $heading-font;
     font-weight: 300;
     color: $creamWhite;
@@ -258,7 +264,7 @@ header nav a {
       transform: translateY(-100%) translateX(-50%);
       cursor: pointer;
 
-      &:focus{
+      &:focus {
         background-color: $accentColor;
       }
     }
@@ -300,7 +306,6 @@ header nav a {
     }
 
 
-
     .slideshow-wrapper {
       display: flex;
       width: 400%;
@@ -321,8 +326,6 @@ header nav a {
   }
 
 }
-
-
 @keyframes slideshow {
   0% {
     left: 0
@@ -376,6 +379,115 @@ header nav a {
     left: 0
   }
 }
-
-
 /*end of banner*/
+
+
+/*day offer*/
+.day-offer {
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  gap: 1.6rem 3.2rem;
+  grid-template-areas:
+            "img1 img1 head head"
+            "img1 img1 p p"
+            "img1 img1 btn btn"
+            "img1 img1 img2 img2";
+  justify-items: center;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.day-offer-img-one {
+  grid-area: img1;
+}
+
+.day-offer-img-two {
+  grid-area: img2;
+}
+
+.day-offer-paragraph {
+  grid-area: p;
+  font-size: 1.6rem;
+}
+
+.day-offer-btn {
+  grid-area: btn;
+  width: 16rem;
+  padding: 1rem;
+  background-color: $accentColor;
+  border: none;
+  color: $creamWhite;
+  cursor: pointer;
+  border-radius: 5rem;
+  text-transform: uppercase;
+}
+
+.day-offer-heading {
+  grid-area: head;
+  font-family: $heading-font;
+  font-size: 5.5rem;
+  font-weight: 300;
+}
+/*end of day offer*/
+
+/*best selling furniture section*/
+.bestselling-furniture {
+  height: min-content;
+  text-align: center;
+
+  .bestselling-furniture-header {
+    font-family: $heading-font;
+    font-size: 5.5rem;
+    font-weight: 300;
+    padding: 3rem 0;
+  }
+
+  .bestselling-furniture-cards {
+    display: grid;
+    grid-template-columns:
+            repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 6.4rem;
+  }
+
+  .bestselling-furniture-card {
+    background-color: lighten(gray, 50);
+    padding-bottom: 1.2rem;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      display: inline-block;
+      padding: 1rem 2rem;
+      min-width: 300px;
+      background-color: rgba($creamWhite, 0.93);
+      font-family: $heading-font;
+      font-size: 2.4rem;
+      transform: translateY(-50%);
+      font-weight: 400;
+      border-radius: 8px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+    }
+
+    p{
+      font-size: 2.5rem;
+    }
+
+    button {
+      @extend .day-offer-btn;
+      margin-top: 1.2em;
+
+      &:hover{
+        background-color: darken($accentColor, 10%);
+      }
+    }
+  }
+}
+/*end of best selling furniture section*/
