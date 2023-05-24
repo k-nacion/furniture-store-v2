@@ -402,6 +402,7 @@ header nav a:hover {
 }
 
 /*end of best selling furniture section*/
+/*Gallery*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(8, minmax(1rem, 1fr));
@@ -467,6 +468,61 @@ header nav a:hover {
   grid-column: 7/span 2;
 }
 
-/**/
+/*end of Gallery*/
+/*contact*/
+.newsletter-form {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.newsletter-heading {
+  font-family: "Zodiak", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.newsletter-input {
+  border: 4px #f04c49 solid;
+  padding: 0.8rem;
+  color: #531413;
+  outline: none;
+  font-family: "General Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.newsletter-input:active {
+  border-radius: 0;
+}
+
+.newsletter-btn {
+  background-color: #f04c49;
+  border: none;
+  color: #f5eede;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.newsletter-btn:hover {
+  background-color: #ec1e1a;
+}
+
+/*end of contact*/
+/*Footer*/
+.footer {
+  background: #531413;
+}
+.footer p {
+  color: #f5eede;
+  font-size: 1.2rem;
+  padding: 1.8rem 0;
+  text-align: center;
+}
+.footer a {
+  color: #e9dab7;
+  text-decoration: none;
+}
+
+/*end of Footer*/
 
 /*# sourceMappingURL=main.css.map */

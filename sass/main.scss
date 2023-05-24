@@ -493,8 +493,9 @@ header nav a {
     }
   }
 }
-
 /*end of best selling furniture section*/
+
+/*Gallery*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(8, minmax(1rem, 1fr));
@@ -577,5 +578,67 @@ header nav a {
   }
 
 }
+/*end of Gallery*/
 
-/**/
+
+/*contact*/
+
+
+.newsletter-form {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.newsletter-heading {
+  font-family: $heading-font;
+  font-size: 2.2rem;
+  font-weight: 400;
+
+}
+
+.newsletter-input {
+  border: 4px $accentColor solid;
+  padding: .8rem;
+  color: $deepRed;
+  outline: none;
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 600;
+
+  &:active {
+    border-radius: 0;
+  }
+
+}
+
+.newsletter-btn {
+  background-color: $accentColor;
+  border: none;
+  color: $creamWhite;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover{
+    background-color: darken($accentColor, 10);
+  }
+}
+/*end of contact*/
+
+/*Footer*/
+.footer {
+  background: $deepRed;
+  p {
+    color: $creamWhite;
+    font-size: 1.2rem;
+    padding: 1.8rem 0;
+    text-align: center;
+  }
+
+  a{
+    color: darken($creamWhite, 10);
+    text-decoration: none;
+  }
+}
+/*end of Footer*/
