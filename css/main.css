@@ -58,6 +58,12 @@ header nav a:visited {
 header nav a:hover {
   color: #bb2d2b;
 }
+header nav a label {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
 .search-field {
   display: flex;
@@ -524,5 +530,111 @@ header nav a:hover {
 }
 
 /*end of Footer*/
+/*login/signup modal*/
+.forms-modal-wrapper {
+  background: #eee;
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.forms-modal-wrapper .x-btn {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #650a08;
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.6rem;
+}
+.forms-modal-wrapper .show-btns-wrapper {
+  display: flex;
+  padding: 1rem;
+}
+.forms-modal-wrapper .show-form-btn, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-signup-form, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-login-form {
+  flex: 0 1 50%;
+  background-color: #f04c49;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  border: #eee solid 1px;
+  cursor: pointer;
+  color: #f5eede;
+}
+.forms-modal-wrapper .show-form-btn:hover, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-signup-form:hover, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-login-form:hover {
+  background-color: #c31310;
+}
+.forms-modal-wrapper .show-form-btn:active, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-signup-form:active, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-login-form:active {
+  background-color: #f26361;
+}
+.forms-modal-wrapper .form-heading {
+  font-size: 2rem;
+  font-weight: normal;
+  padding-top: 1rem;
+  padding-left: 0.3rem;
+  text-transform: uppercase;
+}
+.forms-modal-wrapper form {
+  width: 50rem;
+  padding: 1rem;
+}
+.forms-modal-wrapper form input:not(.form-btn) {
+  background-color: white;
+  color: #777;
+  padding: 1.3rem;
+  margin: 0.3rem 0;
+  border: 0.2rem solid #eeeeee;
+}
+.forms-modal-wrapper .fullname-inputs-wrapper {
+  display: flex;
+}
+.forms-modal-wrapper .fullname-inputs-wrapper input {
+  width: 50%;
+}
+.forms-modal-wrapper .form-input {
+  width: 100%;
+}
+.forms-modal-wrapper .form-btn {
+  width: 35%;
+  background-color: #d38800;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  padding: 1rem;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.forms-modal-wrapper .form-btn:hover {
+  background-color: #6d4600;
+}
+.forms-modal-wrapper .form-btn:active {
+  background-color: #ed9800;
+}
+.forms-modal-wrapper .login-form {
+  display: none;
+}
+.forms-modal-wrapper .show-signup-form, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-login-form {
+  color: #999999;
+  background-color: #da1612;
+  pointer-events: none;
+}
+.forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-signup-form, .forms-modal-wrapper #show-form:checked ~ .show-btns-wrapper .show-login-form {
+  pointer-events: auto;
+}
+.forms-modal-wrapper #show-form:checked ~ .signup-form {
+  display: none;
+}
+.forms-modal-wrapper #show-form:checked ~ .login-form {
+  display: block;
+}
+
+/*end of login/signup modal*/
 
 /*# sourceMappingURL=main.css.map */

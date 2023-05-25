@@ -13,6 +13,37 @@
     <script src="https://kit.fontawesome.com/7bc47f7305.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
+    <!-- modal box -->
+    <input type="checkbox" id="show-hide-modal" hidden>
+    <div class="forms-modal-wrapper">
+        <label for="show-hide-modal" class="x-btn">&#10005;</label>
+        <input type="checkbox" id="show-form" hidden>
+        <div class="show-btns-wrapper">
+            <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+            <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+        </div>
+
+        <form class="signup-form">
+            <h3 class="form-heading">Sign Up</h3>
+            <div class="fullname-inputs-wrapper">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Second Name">
+            </div>
+            <input type="text" class="form-input" placeholder="Username">
+            <input type="email" class="form-input" placeholder="Email Address">
+            <input type="password" class="form-input" placeholder="Password">
+            <input type="submit" value="SIGN UP" class="form-btn">
+        </form>
+
+        <form class="login-form">
+            <h3 class="form-heading">Log In</h3>
+            <input type="email" class="form-input" placeholder="Email Address">
+            <input type="password" class="form-input" placeholder="Password">
+            <input type="submit" value="LOG IN" class="form-btn">
+        </form>
+    </div>
+    <!-- end of modal box -->
+
     <div class="container">
         <header>
             <!-- top-nav -->
@@ -28,7 +59,7 @@
 
                 <nav class="right-nav">
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Sign Up/Log In</a></li>
+                        <li><a href="#"><label for="show-hide-modal"><i class="fa-solid fa-right-to-bracket"></i> Sign Up/Log In</label></a></li>
                         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>Cart <span>(2 items)</span></a></li>
                         <li><a href="#"><i class="fa-solid fa-truck"></i>Order Now</a></li>
                         <li><a href="#"><i class="fa-solid fa-heart"></i>Wishlist</a></li>
@@ -99,7 +130,7 @@
                     </li>
                 </ul>
             </nav> <!-- end of category-nav -->
-        </header>
+        </header> <!--end of header-->
         <section class="banner">
             <div class="banner-content">
                 <h1 class="banner-heading">Great Sale</h1>
@@ -198,7 +229,7 @@
                 <input type="submit" class="newsletter-btn" value="Subscribe">
             </form>
         </section>
-    </div>
+    </div> <!--end of newsletter-->
 
     <footer class="footer">
         <div class="container">
@@ -206,6 +237,6 @@
                          target="_blank">KNacion <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>. All rights reserved.</p>
         </div>
-    </footer>
+    </footer> <!--end of footer-->
 </body>
 </html>
